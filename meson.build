@@ -14,7 +14,7 @@ if build_machine.system() == 'windows'
 endif
 
 # Technically, I think this wants 1.5.2... Does it matter?
-libzip_dep = dependency('libzip', fallback : ['libzip', 'libzip_dep'], static : libzip_dep_static)
+libzip_dep = dependency('libzip', static : libzip_dep_static)
 
 libzippp_src = [
   'src/libzippp.cpp',
