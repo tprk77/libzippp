@@ -13,7 +13,7 @@ if build_machine.system() == 'windows'
   bcrypt_dep_opt = [meson.get_compiler('cpp').find_library('bcrypt')]
 endif
 
-# Technically, I think this wants 1.5.2... Does it matter?
+# Technically, I think this wants 1.5.2, but Ubuntu 18.04 has 1.1.2... Does it matter?
 libzip_dep = dependency('libzip', static : libzip_dep_static)
 
 libzippp_src = [
